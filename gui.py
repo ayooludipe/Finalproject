@@ -30,9 +30,9 @@ class quiz_game:
         # selected option in a question.
         self.opt_selected = IntVar()
 
-        # displaying text_box for the current question and used to
+        # displaying text boxes for the current question and used to
         # display options for the current question
-        self.opts = self.text_box()
+        self.opts = self.text_boxes()
 
         # display options for the current question
         self.display_options()
@@ -56,7 +56,7 @@ class quiz_game:
         correct = f"Correct: {self.correct}"
         wrong = f"Wrong: {wrong_count}"
 
-        # calculates the percentage of correct answers
+        # calcultaes the percentage of correct answers
         score = int(self.correct / self.data_size * 100)
         result = f"Score: {score}%"
 
@@ -66,6 +66,10 @@ class quiz_game:
     # This method checks the Answer after we click on Next.
     def check_ans(self, q_no):
 
+        # checks for if the selected option is correct
+        if self.opt_selected.get() == answer[q_no]:
+            # if the option is correct it return true
+            return True
 
     # This method is used to check the answer of the
     # current question by calling the check_ans and question no.
@@ -143,12 +147,12 @@ class quiz_game:
 
     # This method shows the Text box to select the Question
     # on the screen at the specified position. It also returns a
-    
+
     def Text_box(self):
         # setting the text box button properties
         entry1 = tk.Entry(root)
         canvas1.create_window(200, 140, window=entry1)
-       
+
 
 # Create a GUI Window
 gui = Tk()
@@ -174,3 +178,4 @@ quiz = quiz_game()
 gui.mainloop()
 
 # END OF THE PROGRAM
+
