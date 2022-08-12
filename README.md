@@ -1,2 +1,2 @@
 # Finalproject
-TicTacToe
+Quiz_Game
