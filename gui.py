@@ -11,7 +11,7 @@ import quiz_game
 
 
 # class to define the components of the GUI
-class Quiz:
+class quiz_game:
     # This is the first method which is called when a
     # new object of the class is initialized. This method
     # sets the question count to 0. and initialize all the
